@@ -1,0 +1,84 @@
+/*
+animacion
+*/
+@keyframes animacion_test{
+    from{
+        background-color: red;
+    }
+    to{
+        background-color: yellow;
+    }
+}
+@keyframes girar{
+    from{
+        transform: rotate(odeg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes label-animation{
+    from{
+        transform: rotate(odeg);
+        margin-left: 0;
+    }
+    to{
+        transform: rotate(360deg);
+        margin-left: 85vw;
+    }
+}
+.container-label{
+    border: 5px solid rgb(89, 90, 10);
+    width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+.label{
+    width: 64px;
+    background-color: rgb(60, 189, 85);
+    color:white;
+    font-size: 1.3rem;
+    padding: 1rem;
+    border-radius: 20px;
+    text-align: center;
+    /* animacion*/
+    animation-name: label-animation;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+.loader{
+    width: 64px;
+    height: 64px;
+    border: 5px solid rgb(90, 180, 220);
+    border-top: 5px solid rgb(60, 189, 85);
+    border-radius: 50%;
+    animation: girar 2s linear infinite;
+}
+
+.loader-double{
+    width: 64px;
+    height: 64px;
+    border: 16px solid rgb(30, 230, 230);
+    border-top: 16px solid rgb(220, 50, 100);
+    border-bottom: 16px solid rgb(45, 45, 20);
+    border-radius: 50%;
+    animation: girar 2s ease-in-out infinite;
+}
+
+.animada{
+    width: 100%;
+    background-color: red;
+    color: white;
+    text-align: center;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation-name: animacion_test;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
