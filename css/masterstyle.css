@@ -22,7 +22,7 @@ section, footer, article, aside{
     padding: 1rem;
 }
 article{
-    width: 27%;
+    width: 25%;
     display:inline-block;
     height: 200px;
 }
