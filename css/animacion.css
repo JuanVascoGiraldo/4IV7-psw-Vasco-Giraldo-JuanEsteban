@@ -11,7 +11,7 @@ animacion
 }
 @keyframes girar{
     from{
-        transform: rotate(odeg);
+        transform: rotate(0deg);
     }
     to{
         transform: rotate(360deg);
@@ -20,7 +20,7 @@ animacion
 
 @keyframes label-animation{
     from{
-        transform: rotate(odeg);
+        transform: rotate(0deg);
         margin-left: 0;
     }
     to{
