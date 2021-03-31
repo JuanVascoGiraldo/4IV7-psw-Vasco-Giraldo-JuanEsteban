@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problema 1</title>
+    <link rel="stylesheet" href="./CSS/problema02.css">
+    <script src="./JS/problema01.js" ></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap" rel="stylesheet">
+</head>
+<body style="font-family: 'Noto Sans JP';">
+    <div>
+    <h1 style="text-align: center;">Problema 1</h1>
+    <p style="text-align: center;"> individuo desea invertir Su capital en un banco y desea saber cuanto dinero tenfra alcabo de un mes</p>
+    <form name="formulario" method="get" action="problema01.html">
+        <table align="center" >
+            <tr>
+                <td >Introduce la cantidad a invertir : $</td>
+                <td > <input type="text" name="cantidad"
+                onkeypress="return validarn(event)"> </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td > <input type="button" value="Interes"
+                    name="enviar" onclick="interes()"> </td>
+            </tr>
+            <tr>
+                <td >Su saldo total con interés del 2% mensual es de:</td>
+                <td > <input type="text" name="sueldoti"
+                    id="cantidadti" readonly="readonly" 
+                    class="input_text"> </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td> <input type="button" name="borrard" 
+                    value="Borrar" onclick="borrar()"> </td>
+            </tr>
+            <tr>
+                <td colspan="2"><a href="ejercicios.html"><div class="regresar">Regresar</div></a></td>
+            </tr>
+        </table>
+    </form>
+</div>
+     
+</body>
+</html>

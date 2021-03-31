@@ -62,6 +62,7 @@ function validar(formulario){
     var txt = formulario.email.value;
     var b = /^[^@\s]+@[^@\.\s]+(\.[^@\.\s]+)+$/;
 
+    
     alert("Email " + (b.test(txt)?"":" no ")+" valido");
 
     return b.test(txt);

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problema 2</title>
+    <link rel="stylesheet" href="css/problema02.css">
+    <script src="./JS/problema02.js" ></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap" rel="stylesheet">
+</head>
+<body style="font-family: 'Noto Sans JP'; ">
+    <div>
+      <h1 align="center">Problema 2</h1>
+      <p style="text-align: center;">Calcular el sueldo total en base a la comición de las ventas y el sueldo base </p>
+      <form name="problema2" method="SET" action="problema02.html">
+        <table align="center">
+            <tr>
+                <td>Primera Venta</td>
+                <td><input type="text" name="venta1" id="venta1" placeholder="Introduza La primera venta" 
+                    onkeypress="return validarnumero(event)"></td>
+            </tr>
+            <tr>
+                <td>Segunda Venta</td>
+                <td><input type="text" name="venta2" id="venta2" placeholder="Introduza La segunda venta" 
+                    onkeypress="return validarnumero(event)"></td>
+            </tr>
+            <tr>
+                <td>Tercera Venta</td>
+                <td><input type="text" name="venta3" id="venta3" placeholder="Introduza La tercera venta" 
+                    onkeypress="return validarnumero(event)"></td>
+            </tr>
+            <tr>
+                <td>Sueldo Base</td>
+                <td><input type="text" name="sueldo" id="sueldo" placeholder="Introduza Su sueldo base" 
+                    onkeypress="return validarnumero(event)"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="button" value="Calcular" name="Calcular" onclick="calcular()" style="border-radius: 5px;"></td>
+            </tr>
+            <tr>
+                <td>Total de Comición</td>
+                <td>Total de Sueldo</td>
+            </tr>
+            <tr>
+                <td><input type="text" name="comicion" id="comicion" readonly="readonly" ></td>
+                <td><input type="text" name="total" id="total" readonly="readonly" ></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="reset" value="Borrar" name="borrar" style="border-radius: 5px;"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><a href="ejercicios.html"><div class="regresar">Regresar</div></a></td>
+            </tr>
+        </table>
+      </form>
+        
+    </div>
+    
+</body>
+</html>
