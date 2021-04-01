@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problema 5</title>
+    <link rel="stylesheet" href="css/problema02.css">
+    <script src="./JS/problema02.js" ></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap" rel="stylesheet">
+</head>
+<body style="font-family: 'Noto Sans JP'; ">
+    <div>
+      <h1 align="center">Problema 5</h1>
+      <p style="text-align: center;">Un maestro desea saber el porcentaje de hombres y mujeres que hay en un grupo de estudiantes
+        </p>
+      <form name="problema5" method="SET" action="problema05.html">
+        <table align="center">
+            <tr>
+                <td>Total de Mujeres</td>
+                <td><input type="text" name="mujeres" id="mujeres" placeholder="Intoduzca el Total de Mujeres"  
+                    onkeypress="return validarnumero1(event)" class="in3"></td>
+            </tr>
+            <tr>
+                <td>Total de Hombres</td>
+                <td><input type="text" name="hombres" id="hombres" placeholder="Intoduzca el Total de Hombres" 
+                    onkeypress="return validarnumero1(event)" class="in3"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="button" value="Calcular" name="Calcular" onclick="porcentajes()" style="border-radius: 5px;"></td>
+            </tr>
+            <tr>
+                <td>Total de Estudiantes</td>
+                <td><input type="text" name="totalEstudiantes" id="totalEstudiantes" readonly="readonly" ></td>
+            </tr>
+            <tr>
+                <td>% Hombres</td>
+                <td><input type="text" name="porcH" id="porcH" readonly="readonly" ></td>
+            </tr>
+            <tr>
+                <td>% Mujeres</td>
+                <td><input type="text" name="porcM" id="porcM" readonly="readonly" ></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="reset" value="Borrar" name="borrar" style="border-radius: 5px;"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><a href="ejercicios.html"><div class="regresar">Regresar</div></a></td>
+            </tr>
+        </table>
+      </form>
+        
+    </div>
+    
+</body>
+</html>

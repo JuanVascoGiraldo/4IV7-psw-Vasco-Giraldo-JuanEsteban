@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problema 8</title>
+    <link rel="stylesheet" href="css/problema02.css">
+    <script src="./JS/problema02.js" ></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap" rel="stylesheet">
+</head>
+<body style="font-family: 'Noto Sans JP'; ">
+    <div>
+      <h1 align="center">Problema 8</h1>
+      <p style="text-align: center;"> Leer tres numero e imprimir el mayor
+        </p>
+      <form name="problema8" method="SET" action="problema08.html">
+        <table align="center">
+            <tr>
+                <td>Primer Numero</td>
+                <td><input type="text" name="num1" id="num1" placeholder="Intoduzca el Primer Numero"  
+                    onkeypress="return validarnumero2(event)"></td>
+            </tr>
+            <tr>
+                <td>Segundo Numero</td>
+                <td><input type="text" name="num2" id="num2" placeholder="Intoduzca el Segundo Numero"
+                    onkeypress="return validarnumero2(event)"></td>
+            </tr>
+            <tr>
+                <td>Tercer Numero</td>
+                <td><input type="text" name="num3" id="num3" placeholder="Intoduzca el Tercer Numero"
+                    onkeypress="return validarnumero2(event)"></td>
+            </tr>           
+            <tr>
+                <td></td>
+                <td><input type="button" value="Calcular" name="Calcular" onclick="numayor()" style="border-radius: 5px;"></td>
+            </tr>
+            <tr>
+                <td>El numero Mayor Es</td>
+                <td><input type="text" name="mayor" id="mayor" readonly="readonly" ></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="reset" value="Borrar" name="borrar" style="border-radius: 5px;"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><a href="ejercicios.html"><div class="regresar">Regresar</div></a></td>
+            </tr>
+        </table>
+      </form>
+        
+    </div>
+    
+</body>
+</html>

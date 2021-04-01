@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problema 4</title>
+    <link rel="stylesheet" href="css/problema02.css">
+    <script src="./JS/problema02.js" ></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap" rel="stylesheet">
+</head>
+<body style="font-family: 'Noto Sans JP'; ">
+    <div>
+      <h1 align="center">Problema 4</h1>
+      <p style="text-align: center;">Un Estudiante desea daber el total de su calificación si:
+        <ul>
+            <li>el 55% es del promedio de su calificación de los tres parciales</li>
+            <li>el 30% calificacion del examen Final</li>
+            <li>el 15% de un trabajo final</li>
+        </ul></p>
+      <form name="problema4" method="SET" action="problema04.html">
+        <table align="center">
+            <tr>
+                <td>Calificación Primer Parcial</td>
+                <td><input type="text" name="calif1" id="calif1" placeholder="Intoduzca La calificación del Primer parcial" 
+                    onkeypress="return validarnumero(event)" class="in3"></td>
+            </tr>
+            <tr>
+                <td>Calificación Segundo Parcial</td>
+                <td><input type="text" name="calif2" id="calif2" placeholder="Intoduzca La calificación del Segundo parcial" 
+                    onkeypress="return validarnumero(event)" class="in3"></td>
+            </tr>
+            <tr>
+                <td>Calificación Tercer Parcial</td>
+                <td><input type="text" name="calif3" id="calif3" placeholder="Intoduzca La calificación del Tercer parcial" 
+                    onkeypress="return validarnumero(event)"class="in3"></td>
+            </tr>
+            <tr>
+                <td>Calificación Examen Final</td>
+                <td><input type="text" name="califexa" id="califexa" placeholder="Intoduzca La calificación del Examen Final" 
+                    onkeypress="return validarnumero(event)"class="in3"></td>
+            </tr>
+            <tr>
+                <td>Calificación Trabajo Final</td>
+                <td><input type="text" name="califtra" id="califtra" placeholder="Intoduzca La calificación del Trabajo Final" 
+                    onkeypress="return validarnumero(event)" class="in3"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="button" value="Calcular" name="Calcular" onclick="calificación()" style="border-radius: 5px;"></td>
+            </tr>
+            <tr>
+                <td>Calificación Final</td>
+                <td><input type="text" name="califinal" id="califinal" readonly="readonly" ></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="reset" value="Borrar" name="borrar" style="border-radius: 5px;"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><a href="ejercicios.html"><div class="regresar">Regresar</div></a></td>
+            </tr>
+        </table>
+      </form>
+        
+    </div>
+    
+</body>
+</html>
