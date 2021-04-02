@@ -21,6 +21,21 @@ div{
     background-color: #7C9885;
 }
 .in3{
-    width: 145%;
+    width: 153%;
 }
-
+.regresar1{
+    background-color: #28666E;
+    border-radius: 4rem;
+    text-align: center;
+    margin-top: 2rem;
+    margin-left: 10rem;
+    width: 30%;
+    height: 30px;
+}
+.regresar1:hover{
+    box-shadow: 0px 0px 15px #ffffff;
+    background-color: #7C9885;
+}
+.listas{
+    display: inline-block;
+}

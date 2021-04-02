@@ -178,3 +178,29 @@ function CaUtilidad(){
     document.problema10.utilidad.value="$"+ut;
     document.problema10.totap.value="$"+total;
 }
+
+function CalEdad(){
+    var año= parseInt(document.problema6.añoNaci.value);
+    var mes= parseInt(document.problema6.mesNaci.value);
+    var fecha= new Date();
+    var añoAc= fecha.getFullYear();
+    const mesAc = fecha.getMonth() + 1; 
+    if((año>1920 && año<añoAc)&&(mes>0 && mes<13)){
+        var edades= añoAc - año;
+        if(mes>mesAc){
+            var edadAc= edades-1; 
+            document.problema6.edad.value="Tienes "+ edadAc+ " años, pero este mismo año cumples "+ edades+ " años" ;
+        }
+        if(mes==mesAc){
+            document.problema6.edad.value="Este mes cumples "+ edades + " años";
+        }
+        if(mes<mesAc){
+            document.problema6.edad.value="Tienes "+ edades + " años";
+        }
+    }
+    else{
+        alert("los Datos ingresados no son validos");
+    }
+    
+
+}

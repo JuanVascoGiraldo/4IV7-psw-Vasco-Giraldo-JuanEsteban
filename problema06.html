@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Problema 3</title>
+    <title>Problema 6</title>
     <link rel="stylesheet" href="css/problema02.css">
     <script src="./JS/problema02.js" ></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -12,22 +12,28 @@
 </head>
 <body style="font-family: 'Noto Sans JP'; ">
     <div>
-      <h1 align="center">Problema 3</h1>
-      <p style="text-align: center;">Tienda ofrece 15% de descuento en el total de la venta total, los clientes desean saber el total a pagar</p>
-      <form name="problema3" method="SET" action="problema03.html">
+      <h1 align="center">Problema 6</h1>
+      <p style="text-align: center;"> Elaborar un algoritmo que calcule la edad de una persona
+        </p>
+      <form name="problema6" method="SET" action="problema06.html">
         <table align="center">
             <tr>
-                <td>Total de Venta</td>
-                <td><input type="text" name="venta1" id="venta1" placeholder="Introduza El total de tu venta" 
-                    onkeypress="return validarnumero(event)"></td>
+                <td>Año de Nacimiento</td>
+                <td><input type="text" name="añoNaci" id="añoNaci" placeholder="Ej 2003"  
+                    onkeypress="return validarnumero1(event)"></td>
             </tr>
+            <tr>
+                <td>Mes de Nacimiento</td>
+                <td><input type="text" name="mesNaci" id="mesNaci" placeholder="Ej: 12"
+                    onkeypress="return validarnumero1(event)"></td>
+            </tr>          
             <tr>
                 <td></td>
-                <td><input type="button" value="Calcular" name="Calcular" onclick="descuento()" style="border-radius: 5px;"></td>
+                <td><input type="button" value="Calcular" name="Calcular" onclick="CalEdad()" style="border-radius: 5px;"></td>
             </tr>
             <tr>
-                <td>Total de Comición</td>
-                <td><input type="text" name="descuentos" id="descuentos" readonly="readonly" ></td>
+                <td>Edad</td>
+                <td><input type="text" name="edad" id="edad" readonly="readonly" class="in3" ></td>
             </tr>
             <tr>
                 <td></td>
