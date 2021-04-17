@@ -67,12 +67,12 @@ function problema3(){
     if(p3_input.length<30){
         //hacer un for para comprobar que todos los caracteres obtenidos del input esten pertenezcan a la cadena
         var seguir= true;
-        for(var i=0; i<comprobar.length; i++){
+        for(var i=0; i<p3_input.length; i++){
             var caracter = p3_input.charAt(i);
             for(var j = 0; j < comprobar.length; j++){
                 if(caracter == comprobar.charAt(j))
                     break;
-                if(j == comprobar.length-1){
+                if(j == comprobar.length){
                     seguir = false;
                     break;
                 }
