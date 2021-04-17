@@ -51,46 +51,76 @@ function problema2(){
 
 function validarletras(e){
     var code=(document.all)?e.keyCode:e.which;
-    if((code>=97 && code<=122)||(code>=65 && code<=90)||code==44||(code>=129 && code<=165)) { 
+    if((code>=65 && code<=90)||code==44||(code>=129 && code<=165)||(String.fromCharCode(code)=="Ñ")) { 
         return true;
       } else{ 
         return false;}
 }
 
+
+var comprobar = "QWERTYUIOPASDFGHJKLÑZXCVBNM,";
+
 function problema3(){
+    
     var p3_input= document.querySelector('#p3-input').value;
 
-    var p3_array= p3_input.split(',');
-
-    var p3_Cant = [];
-    
-    p3_array.forEach( function (palabra) {
-        var numCaracteres= palabra.length;
-        for( var j=0; j<palabra.length; j++){
-            var caracter= palabra.charAt(j);
-            for(var p=0; p<palabra.length; p++){
-                if(caracter == palabra.charAt(p)) numCaracteres -= 1;
+    if(p3_input.length<30){
+        //hacer un for para comprobar que todos los caracteres obtenidos del input esten pertenezcan a la cadena
+        var seguir= true;
+        for(var i=0; i<comprobar.length; i++){
+            var caracter = p3_input.charAt(i);
+            for(var j = 0; j < comprobar.length; j++){
+                if(caracter == comprobar.charAt(j))
+                    break;
+                if(j == comprobar.length-1){
+                    seguir = false;
+                    break;
+                }
             }
-            numCaracteres += 1;
         }
-        p3_Cant.push(numCaracteres);
-    });
 
-    var Mayor= Math.max.apply(null, p3_Cant);
+        if(seguir == true){
+            var p3_array= p3_input.split(',');
 
-    var posiciones= [];
+            var p3_Cant = [];
+            
+            p3_array.forEach( function (palabra) {
+                var numCaracteres= palabra.length;
+                for( var j=0; j<palabra.length; j++){
+                    var caracter= palabra.charAt(j);
+                    for(var p=0; p<palabra.length; p++){
+                        if(caracter == palabra.charAt(p)) numCaracteres -= 1;
+                    }
+                    numCaracteres += 1;
+                }
+                p3_Cant.push(numCaracteres);
+            });
 
-    for(var i=0; i< p3_Cant.length; i++){
-        if(p3_Cant[i] == Mayor){
-            posiciones.push(i);
+            var Mayor= Math.max.apply(null, p3_Cant);
+
+            var posiciones= [];
+
+            for(var i=0; i< p3_Cant.length; i++){
+                if(p3_Cant[i] == Mayor){
+                    posiciones.push(i);
+                }
+            }
+            var Respuesta= '';
+            posiciones.forEach(function (numero) {
+                Respuesta += p3_array[numero] + ',';
+            });
+
+            document.querySelector('#p3-output').textContent= 'Las palabra o palabras con mas caracteres unicos es '
+                + Respuesta + ' Con ' + Mayor + ' Caracteres';
         }
+        else{
+            alert("Solo Introduce Letras Mayusculas");
+        }
+        
+
     }
-    var Respuesta= '';
-    posiciones.forEach(function (numero) {
-        Respuesta += p3_array[numero] + ',';
-    });
+    else{
+        alert("Introduce una cantidad menor a 30 Caracteres");
 
-    document.querySelector('#p3-output').textContent= 'Las palabra o palabras con mas caracteres unicos es '
-        + Respuesta + ' Con ' + Mayor + ' Caracteres';
-
+    }
 }
