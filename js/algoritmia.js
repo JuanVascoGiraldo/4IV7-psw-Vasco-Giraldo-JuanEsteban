@@ -72,7 +72,7 @@ function problema3(){
             for(var j = 0; j < comprobar.length; j++){
                 if(caracter == comprobar.charAt(j))
                     break;
-                if(j == comprobar.length){
+                if(j == comprobar.length-1){
                     seguir = false;
                     break;
                 }
