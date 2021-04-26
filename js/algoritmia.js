@@ -65,7 +65,6 @@ function problema3(){
     var p3_input= document.querySelector('#p3-input').value;
 
     if(p3_input.length<30){
-        //hacer un for para comprobar que todos los caracteres obtenidos del input esten pertenezcan a la cadena
         var seguir= true;
         for(var i=0; i<p3_input.length; i++){
             var caracter = p3_input.charAt(i);
