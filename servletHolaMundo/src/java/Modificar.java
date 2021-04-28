@@ -106,7 +106,7 @@ public class Modificar extends HttpServlet {
             String seleccionado="", cambio="", validar="", validar2="", validar3 ="";
             String q = "";
             int id = 0;
-            boolean seguir= true;
+            boolean seguir= true, seguir2=false;
             seleccionado= request.getParameter("Parametro"); 
             id = Integer.parseInt(request.getParameter("idmodificar"));
             cambio= request.getParameter("cambios");
@@ -169,13 +169,32 @@ public class Modificar extends HttpServlet {
             if(id <1 ){
                 seguir = false;
             }
-            if(seleccionado.equals("Edad")){
+            if(seleccionado.equals("Edad") && seguir==true){
                 if(Integer.parseInt(cambio)<1){
                     seguir = false;
                 }
             }
+            try{
+                String w = "select * from mregistro";
+                set = con.createStatement();
+                rs = set.executeQuery(w);
+                int idRegistados;
+                while(rs.next()){
+                    idRegistados = rs.getInt("id_usu");
+                    if(idRegistados == id){
+                        seguir2 = true;
+                    }
+                }
+                
             
-            if(seguir == true){
+            }catch(Exception e){
+                    System.out.println("No se ha podido Consultar");
+                    System.out.println(e.getMessage());
+                    System.out.println(e.getStackTrace());}
+            
+            
+            
+            if(seguir == true && seguir2==true){
                 out.println("<!DOCTYPE html>");
                 out.println("<html>");
                 out.println("<head>");
@@ -232,6 +251,12 @@ public class Modificar extends HttpServlet {
                             +"color: white; background-color: black; margin-left: 32rem; text-align: center;'>" 
                             +"<h1>Volver al Formulario</h1>\n"
                             +"</div>\n" 
+                            + "</a>"
+                            +"<a href='Consultar'>\n"
+                            +"<div style='font-family: 'Noto Sans JP'; border-radius: 5px; width: 20%; '"
+                            +"color: white; background-color: black; margin-left: 32rem; text-align: center;'>" 
+                            +"<h1>Consultar Tabla de Usuarios</h1>\n"
+                            +"</div>\n" 
                             + "</a>");      
                 out.println("</body>");
                 out.println("</html>");
@@ -245,7 +270,7 @@ public class Modificar extends HttpServlet {
                 out.println("<link href='https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap' rel='stylesheet'>");      
                 out.println("</head>");
                 out.println("<body style='background-color: #0D3B66; text-align: center; color: white; font-family: 'Noto Sans JP';'>"
-                            +"<h1>Se introdujo un dato no valido</h1>"
+                            +"<h1>Se introdujo un dato no valido o el Id no ha sido Registrado</h1>"
                             +"<a href='index.html'>\n"
                             +"<div style='font-family: 'Noto Sans JP'; border-radius: 5px; width: 20%; '"
                             +"color: white; background-color: black; margin-left: 32rem; text-align: center;'>" 

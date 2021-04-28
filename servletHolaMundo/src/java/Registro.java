@@ -21,16 +21,12 @@ import javax.servlet.ServletConfig;
  * @author Juanv
  */
 public class Registro extends HttpServlet {
-
-    
     private Connection con;
     private Statement set;
     private ResultSet rs;
     
     public void init(ServletConfig cfg) throws ServletException{
         String url = "jdbc:mysql://localhost/registro4iv7";
-        
-        
         String userName= "root";
         String password= "03042021";
         
@@ -62,11 +58,11 @@ public class Registro extends HttpServlet {
             comprobar= nom+appat+appmat;
             validar = "qwertyuiopasdfghjklñzxcvbnmQWERTYUIOPASDFGHJKLÑZXCVBNM "
                     + "áéóúíÁÉÍÓÚ";
-            validar2= validar + "._@-,$&";
+            validar2= validar + "._@-,$&0123456789";
             for(int i=0; i<comprobar.length(); i++){
                 char caracter = comprobar.charAt(i);
             for(int j = 0; j < validar.length(); j++){
-                if(caracter == validar.charAt(j))
+                if(caracter == validar.charAt(j) || String.valueOf(caracter).equals("ñ")|| String.valueOf(caracter).equals("Ñ"))
                     break;
                 if(j == (validar.length()-1)){
                     seguir = false;
